@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raushan Thakur | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #090d18;
+            overflow-x: hidden;
+            background-image: linear-gradient(rgba(96, 165, 250, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(96, 165, 250, 0.035) 1px, transparent 1px);
+            background-size: 42px 42px;
+        }
+        h1, h2, h3, .gradient-text { font-family: 'Space Grotesk', sans-serif; }
+        .glass {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #60a5fa, #a78bfa);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .animate-blob { animation: float 8s ease-in-out infinite; }
+        .animation-delay-2000 { animation-delay: 2s; }
+        @keyframes float {
+            0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+            50% { transform: translate3d(0, -24px, 0) scale(1.08); }
+        }
+        input:focus, textarea:focus { box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.18); }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .animate-blob { animation: none; }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 selection:bg-blue-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="text-xl sm:text-2xl font-bold gradient-text">Raushan Thakur</div>
+                <div class="hidden md:flex space-x-8 font-medium">
+                    <a href="#home" class="hover:text-blue-400 transition">Home</a>
+                    <a href="#about" class="hover:text-blue-400 transition">About</a>
+                    <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+                    <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+                    <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" type="button" aria-label="Open navigation menu" aria-expanded="false" class="text-gray-300 focus:outline-none focus:text-blue-400">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass absolute w-full px-4 py-4 space-y-4">
+            <a href="#home" class="block hover:text-blue-400 transition">Home</a>
+            <a href="#about" class="block hover:text-blue-400 transition">About</a>
+            <a href="#skills" class="block hover:text-blue-400 transition">Skills</a>
+            <a href="#projects" class="block hover:text-blue-400 transition">Projects</a>
+            <a href="#contact" class="block hover:text-blue-400 transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16 px-4 relative overflow-hidden">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div class="absolute bottom-20 right-10 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+
+        <div class="text-center z-10">
+            <h2 class="text-blue-400 font-medium tracking-widest uppercase mb-4">Welcome to my world</h2>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Hi, I'm <span class="gradient-text">Raushan Thakur</span></h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
+                I am a passionate Full Stack Developer dedicated to building scalable, high-performance web applications from front-end to back-end.
+            </p>
+            <div class="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full border border-green-400/30 bg-green-400/10 text-green-300 text-sm">
+                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                Available for freelance and full-time opportunities
+            </div>
+            <div class="flex justify-center gap-4">
+                <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition transform hover:scale-105">View My Work</a>
+                <a href="#contact" class="border border-gray-600 hover:border-blue-400 px-8 py-3 rounded-full font-semibold transition transform hover:scale-105">Hire Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-4 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="relative">
+                <div class="grid grid-cols-2 gap-3 max-w-md mx-auto">
+                    <div class="aspect-[4/5] bg-gray-800 rounded-2xl overflow-hidden border border-white/10 relative group shadow-2xl shadow-blue-950/30">
+                        <img src="raushannn23.jpeg" alt="Raushan Thakur outdoor portrait" class="w-full h-full object-cover object-[center_18%] transition duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-transparent pointer-events-none"></div>
+                    </div>
+                    <div class="aspect-[4/5] bg-gray-800 rounded-2xl overflow-hidden border border-white/10 relative group shadow-2xl shadow-blue-950/30">
+                        <img src="IMG_5060.JPG" alt="Raushan Thakur professional portrait" onerror="this.onerror=null;this.src='raushannn23.jpeg'" class="w-full h-full object-cover object-[center_18%] transition duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-transparent pointer-events-none"></div>
+                    </div>
+                </div>
+                <div class="absolute -bottom-5 -right-3 w-24 h-24 border-r-2 border-b-2 border-blue-400/70 rounded-br-2xl -z-10"></div>
+            </div>
+            <div>
+                <h2 class="text-3xl font-bold mb-6 flex items-center">
+                    <span class="w-10 h-1 bg-blue-500 mr-4"></span> About Me
+                </h2>
+                <p class="text-gray-400 leading-relaxed mb-6">
+                    Hello! I'm Raushan, a Full Stack Developer with a strong foundation in both client-side and server-side development. I love solving complex problems and building seamless user experiences. My goal is to create efficient, scalable, and visually stunning applications that provide real value to users.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="glass p-4 rounded-lg">
+                        <span class="block text-blue-400 font-bold text-xl">Education</span>
+                        <span class="text-gray-400">MCA - Dev Bhoomi Uttarakhand University<br>BCA - BBRU</span>
+                    </div>
+                    <div class="glass p-4 rounded-lg">
+                        <span class="block text-blue-400 font-bold text-xl">Experience</span>
+                        <span class="text-gray-400">Fresh Graduate | Open to Opportunities</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 px-4 bg-gray-800/50">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-12">My <span class="gradient-text">Skills</span></h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Skill Card -->
+                <div class="glass p-6 rounded-xl hover:border-blue-500 transition group">
+                    <i class="fa-brands fa-html5 text-4xl text-orange-500 mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold">HTML5</h3>
+                </div>
+                <div class="glass p-6 rounded-xl hover:border-blue-500 transition group">
+                    <i class="fa-brands fa-css3-alt text-4xl text-blue-500 mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold">CSS3</h3>
+                </div>
+                <div class="glass p-6 rounded-xl hover:border-blue-500 transition group">
+                    <i class="fa-brands fa-js text-4xl text-yellow-400 mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold">JavaScript</h3>
+                </div>
+                <div class="glass p-6 rounded-xl hover:border-blue-500 transition group">
+                    <i class="fa-brands fa-react text-4xl text-cyan-400 mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold">React</h3>
+                </div>
+                <div class="glass p-6 rounded-xl hover:border-blue-500 transition group">
+                    <i class="fa-brands fa-node-js text-4xl text-green-500 mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold">Node.js</h3>
+                </div>
+                <div class="glass p-6 rounded-xl hover:border-blue-500 transition group">
+                    <i class="fa-solid fa-database text-4xl text-blue-300 mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold">MongoDB</h3>
+                </div>
+                <div class="glass p-6 rounded-xl hover:border-blue-500 transition group">
+                    <i class="fa-brands fa-git-alt text-4xl text-red-500 mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold">Git & GitHub</h3>
+                </div>
+                <div class="glass p-6 rounded-xl hover:border-blue-500 transition group">
+                    <i class="fa-solid fa-server text-4xl text-purple-400 mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold">Express.js</h3>
+                </div>
+                <div class="glass p-6 rounded-xl hover:border-blue-500 transition group">
+                    <i class="fa-brands fa-python text-4xl text-blue-400 mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold">Python</h3>
+                </div>
+                <div class="glass p-6 rounded-xl hover:border-blue-500 transition group">
+                    <i class="fa-solid fa-coffee text-4xl text-red-400 mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold">Java</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-4 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-center">Featured <span class="gradient-text">Projects</span></h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Project Card 1 -->
+            <a href="salon-booking.html" target="_blank" rel="noopener noreferrer" aria-label="Open Salon Appointment Booking App" class="block glass rounded-2xl overflow-hidden group hover:scale-105 transition cursor-pointer">
+                <div class="h-48 bg-gradient-to-br from-blue-600 to-purple-700 relative flex items-center justify-center">
+                    <i class="fa-solid fa-scissors text-6xl text-white opacity-50"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition">Salon Appointment Booking App</h3>
+                    <p class="text-gray-400 text-sm mb-4">
+                        A full-stack appointment system allowing clients to book salon services in real-time. Features include slot management, user authentication, and an admin dashboard for salon owners.
+                    </p>
+                    <div class="flex gap-3">
+                        <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">MERN Stack</span>
+                        <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">JWT</span>
+                        <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Tailwind</span>
+                    </div>
+                </div>
+            </a>
+            <!-- Project Card 2 -->
+            <div class="glass rounded-2xl overflow-hidden group hover:scale-105 transition">
+                <div class="h-48 bg-gradient-to-br from-green-500 to-teal-700 relative flex items-center justify-center">
+                    <i class="fa-solid fa-list-check text-6xl text-white opacity-50"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition">Task Management System</h3>
+                    <p class="text-gray-400 text-sm mb-4">
+                        An efficient productivity tool to track daily tasks, set deadlines, and manage priorities. Built with a focus on clean UI and fast state management.
+                    </p>
+                    <div class="flex gap-3">
+                        <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">React.js</span>
+                        <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Node.js</span>
+                        <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Card 3 -->
+            <a href="ecommerce/index.html" target="_blank" rel="noopener noreferrer" aria-label="Open UrbanCart E-commerce Demo" class="block glass rounded-2xl overflow-hidden group hover:scale-105 transition cursor-pointer">
+                <div class="h-48 bg-gradient-to-br from-orange-500 to-red-700 relative flex items-center justify-center">
+                    <i class="fa-solid fa-cart-shopping text-6xl text-white opacity-50"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition">UrbanCart E-commerce</h3>
+                    <p class="text-gray-400 text-sm mb-4">
+                        A modern storefront with category filters, live product search, and interactive cart management built as a separate portfolio project.
+                    </p>
+                    <div class="flex gap-3">
+                        <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">HTML</span>
+                        <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">CSS</span>
+                        <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">JavaScript</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-4 max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">Get In <span class="gradient-text">Touch</span></h2>
+        <p class="text-gray-400 mb-12">Mujhse connect karne ke liye niche diye gaye links ka use karein ya form fill karein.</p>
+
+        <div class="glass p-8 rounded-3xl">
+            <form id="contact-form" class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                <div>
+                    <label class="block text-sm font-medium text-gray-400 mb-2">Your Name</label>
+                    <input type="text" required class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition" placeholder="John Doe">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-400 mb-2">Your Email</label>
+                    <input type="email" required class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition" placeholder="john@example.com">
+                </div>
+                <div class="md:col-span-2">
+                    <label class="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                    <textarea rows="4" required class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition" placeholder="Your message here..."></textarea>
+                </div>
+                <div class="md:col-span-2 text-center">
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-3 rounded-full font-semibold transition transform hover:scale-105">Send Message</button>
+                    <p id="form-status" class="mt-4 text-sm text-green-400" role="status" aria-live="polite"></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="flex justify-center gap-6 mt-12 text-2xl">
+            <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/raushan-kumar-5b362a270/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://x.com/raushanthakorr" target="_blank" rel="noopener noreferrer" aria-label="X profile" class="text-gray-400 hover:text-blue-400 transition"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/raushann_10/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile" class="text-gray-400 hover:text-blue-400 transition"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-gray-800 text-center text-gray-500 text-sm">
+        <p>&copy; <span id="year"></span> Raushan Thakur. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.toggle('hidden');
+            menuBtn.setAttribute('aria-expanded', isOpen);
+            menuBtn.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuBtn.setAttribute('aria-expanded', 'false');
+                menuBtn.setAttribute('aria-label', 'Open navigation menu');
+            });
+        });
+
+        document.getElementById('contact-form').addEventListener('submit', (event) => {
+            event.preventDefault();
+            document.getElementById('form-status').textContent = 'Thanks! Your message is ready to be connected to an email service.';
+            event.target.reset();
+        });
+
+        // Update Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
